@@ -1,0 +1,22 @@
+  # Entrée : argent et prix
+  Entrer argent
+  Entrer prix
+
+  # Vérification des valeurs d'entrée
+  Si argent <= 0 ou prix <= 0 Alors
+    Afficher "Erreur : L'argent et le prix doivent être strictement supérieurs à 0."
+    Retourner 0
+  Fin Si
+
+  # Initialisation des variables
+  entier bonbons <- 0
+  réel total <- 0
+
+  # Calcul du nombre maximum de bonbons
+  Tant que total + prix <= argent Faire
+    total <- total + prix
+    bonbons <- bonbons + 1
+  Fin Tant que
+
+  # Retourner le résultat
+  Afficher "Nombre maximum de bonbons : ", bonbons
